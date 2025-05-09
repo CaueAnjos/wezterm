@@ -25,7 +25,7 @@ This is my custom WezTerm setup focused on aesthetics, performance, and tmux-lik
 
 ## 🧪 Preview
 
-> A screenshot would go here if I wasn't writing this in a Markdown file 😎
+![Preview](WezTerm-Preview.png)
 
 ---
 
