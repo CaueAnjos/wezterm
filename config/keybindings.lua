@@ -10,8 +10,8 @@ function M.apply_config(config)
 	config.keys = {
 		{
 			mods = "CTRL",
-			key = "/",
-			action = wezterm.action.DisableDefaultAssignment,
+			key = "mapped:/",
+			action = wezterm.action.SendKey({ key = "/", mods = "CTRL" }),
 		},
 		{
 			mods = "LEADER",
