@@ -4,7 +4,7 @@ local M = {}
 
 function M.apply_config(config)
 	-- Configurações do terminal e fonte
-	config.font = wezterm.font("JetBrains Mono")
+	config.font = wezterm.font("JetBrainsMono Nerd Font Propo")
 	config.font_size = 15
 	config.adjust_window_size_when_changing_font_size = false
 
