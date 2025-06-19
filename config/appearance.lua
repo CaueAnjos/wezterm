@@ -4,12 +4,12 @@ local M = {}
 
 -- Definição de cores que serão compartilhadas
 M.colors = {
-	active_tab = "#fabd2f",
-	inactive_tab = "#3c3836",
-	text_active_tab = "#1d2021",
-	text_inactive_tab = "#ebdbb2",
-	background = "#282828",
-	status_accent = "#458588",
+	active_tab = "#fab387",
+	inactive_tab = "#1e1e2e",
+	text_active_tab = "#11111b",
+	text_inactive_tab = "#bac2de",
+	background = "#181825",
+	status_accent = "#f38ba8",
 }
 
 function M.apply_config(config)
@@ -28,9 +28,7 @@ function M.apply_config(config)
 				bg_color = M.colors.active_tab,
 				fg_color = M.colors.text_active_tab,
 				intensity = "Bold",
-				underline = "None",
 				italic = true,
-				strikethrough = false,
 			},
 
 			inactive_tab = {
