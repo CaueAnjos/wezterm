@@ -9,7 +9,7 @@ M.colors = {
 	text_active_tab = "#11111b",
 	text_inactive_tab = "#bac2de",
 	background = "#181825",
-	status_accent = "#f38ba8",
+	status_accent = "#7287fd",
 }
 
 function M.apply_config(config)
