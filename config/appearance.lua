@@ -15,7 +15,7 @@ M.colors = {
 function M.apply_config(config)
 	-- Configurações de aparência da janela
 	config.window_decorations = "RESIZE"
-	config.color_scheme = "Gruvbox dark, hard (base16)"
+	config.color_scheme = "Catppuccin Mocha"
 	config.window_background_opacity = 0.6
 	config.win32_system_backdrop = "Acrylic"
 

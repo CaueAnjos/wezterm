@@ -4,8 +4,8 @@ This is my custom WezTerm setup focused on aesthetics, performance, and tmux-lik
 
 ## ✨ Features
 
-- **Font**: JetBrains Mono, size 15
-- **Colors**: Gruvbox Dark (Hard)
+- **Font**: JetBrainsMono Nerd Font Propo, size 15
+- **Colors**: Catppuccin Mocha
 - **Effects**: Transparent background with acrylic blur
 - **Performance**: 120 FPS for smooth animations
 - **Tabs**:
