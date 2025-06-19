@@ -67,11 +67,11 @@ function M.apply_config(config)
 	}
 
 	-- Adiciona atalhos para alternar entre abas (1-9)
-	for i = 1, 9 do
+	for i = 0, 9 do
 		table.insert(config.keys, {
 			key = tostring(i),
 			mods = "LEADER",
-			action = wezterm.action.ActivateTab(i - 1),
+			action = wezterm.action.ActivateTab(i),
 		})
 	end
 end

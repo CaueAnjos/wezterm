@@ -5,14 +5,14 @@ local M = {}
 
 function M.apply_config(config)
 	-- Configurações básicas da barra de abas
-	config.hide_tab_bar_if_only_one_tab = true
+	config.hide_tab_bar_if_only_one_tab = false
 	config.tab_bar_at_bottom = true
 	config.use_fancy_tab_bar = false
-	config.tab_max_width = 20
+	config.tab_max_width = 15
 
 	-- Configuração do formato de título das abas
 	wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
-		local title = tab.tab_index + 1 .. ": " .. (tab.active_pane.title or "Terminal")
+		local title = "(" .. tab.tab_index .. ") " .. (tab.active_pane.title or "Terminal")
 		local colors = appearance.colors
 
 		local bg_color = tab.is_active and colors.active_tab or colors.inactive_tab
@@ -24,7 +24,7 @@ function M.apply_config(config)
 			title = cropped_title .. "..."
 		end
 
-		local next_tab = tabs[tab.tab_index + 2]
+		local next_tab = tabs[tab.tab_index + 1]
 		local arrow_color = next_tab and (next_tab.is_active and colors.active_tab or colors.inactive_tab)
 			or colors.inactive_tab
 
