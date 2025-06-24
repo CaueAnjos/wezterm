@@ -12,8 +12,8 @@ function M.setup()
 
 		-- Mostra indicador quando leader estiver ativo
 		if window:leader_is_active() then
-			prefix = " " .. utf8.char(0x1f30a)
-			DIVISER = utf8.char(0xe0b6)
+			prefix = " " .. utf8.char(0xf030c) .. " "
+			DIVISER = utf8.char(0xe0b2)
 		end
 
 		window:set_right_status(wezterm.format({
@@ -23,6 +23,20 @@ function M.setup()
 			{ Background = { Color = colors.status_accent } },
 			{ Foreground = { Color = colors.background } },
 			{ Text = prefix },
+		}))
+
+		local NEOVIM = utf8.char(0xf36f)
+		local OS = utf8.char(0xe8e5)
+		local SOFT_DIVISER_LEFT = utf8.char(0xe0b1)
+		local DIVISER_LEFT = utf8.char(0xe0b0)
+
+		window:set_left_status(wezterm.format({
+			{ Background = { Color = colors.logo_overlay } },
+			{ Foreground = { Color = colors.logo_text } },
+			{ Text = " " .. OS .. " " .. SOFT_DIVISER_LEFT .. " " .. NEOVIM .. " " },
+			{ Background = { Color = colors.background } },
+			{ Foreground = { Color = colors.logo_overlay } },
+			{ Text = DIVISER_LEFT .. " " },
 		}))
 	end)
 end

@@ -10,6 +10,8 @@ M.colors = {
 	text_inactive_tab = "#bac2de",
 	background = "#181825",
 	status_accent = "#7287fd",
+	logo_overlay = "#414559",
+	logo_text = "#babbf1",
 }
 
 function M.apply_config(config)
