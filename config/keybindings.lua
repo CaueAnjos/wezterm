@@ -64,6 +64,17 @@ function M.apply_config(config)
 			key = "l",
 			action = wezterm.action.ActivatePaneDirection("Right"),
 		},
+
+		{
+			key = "p",
+			mods = "CTRL",
+			action = wezterm.action.PasteFrom("Clipboard"),
+		},
+		{
+			key = "y",
+			mods = "CTRL",
+			action = wezterm.action.CopyTo("Clipboard"),
+		},
 	}
 
 	-- Adiciona atalhos para alternar entre abas (1-9)
