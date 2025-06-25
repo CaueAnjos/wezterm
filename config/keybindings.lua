@@ -67,12 +67,12 @@ function M.apply_config(config)
 
 		{
 			key = "p",
-			mods = "CTRL",
+			mods = "CTRL|SHIFT",
 			action = wezterm.action.PasteFrom("Clipboard"),
 		},
 		{
 			key = "y",
-			mods = "CTRL",
+			mods = "CTRL|SHIFT",
 			action = wezterm.action.CopyTo("Clipboard"),
 		},
 	}
