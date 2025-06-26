@@ -4,7 +4,31 @@ local M = {}
 
 function M.apply_config(config)
 	-- Configurações do terminal e fonte
-	config.font = wezterm.font("JetBrainsMono Nerd Font Propo")
+	config.font = wezterm.font_with_fallback({
+		{ family = "JetBrainsMonoNL Nerd Font Propo", weight = "DemiBold" },
+		"Symbols Nerd Font Mono",
+		"Segoe UI Emoji",
+	})
+
+	config.font_rules = {
+		{
+			intensity = "Bold",
+			italic = false,
+			font = wezterm.font(
+				"JetBrainsMonoNL Nerd Font Propo",
+				{ weight = "Bold", stretch = "Normal", style = "Normal" }
+			),
+		},
+		{
+			intensity = "Bold",
+			italic = true,
+			font = wezterm.font(
+				"JetBrainsMonoNL Nerd Font Propo",
+				{ weight = "Bold", stretch = "Normal", style = "Italic" }
+			),
+		},
+	}
+
 	config.font_size = 15
 	config.adjust_window_size_when_changing_font_size = false
 
@@ -13,7 +37,7 @@ function M.apply_config(config)
 	config.animation_fps = 120
 
 	-- Shell padrão e diretório inicial
-	config.default_prog = { "C:\\Program Files\\PowerShell\\7\\pwsh.exe", "-NoLogo" }
+	config.default_prog = { "C:\\Program Files\\PowerShell\\7\\pwsh.exe" }
 	config.default_cwd = "C:\\Users\\kawid"
 
 	-- Padding da janela
